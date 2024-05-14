@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* root varaible */
+:root {
+  --cl-primary: #678e3e;
+  --cl-primary-light: #beed8c;
+  --cl-grey-d: #102a42;
+  --cl-grey-l: #617d98;
+  --cl-grey-ll: #f1f5f8;
+  --cl-white: #fff;
+  --ff-primary: "Red Hat Display", sans-serif;
+  --ff-secondary: "Grand Hotel", cursive;
+  --transition: all 0.3s linear;
+  --letter-spacing: 0.2rem;
+  --radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  background: var(--cl-white);
+  color: var(--cl-grey-l);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
