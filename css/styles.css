@@ -100,6 +100,32 @@ p {
   background: var(--cl-primary-light);
   color: var(--cl-primary);
 }
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* section Css */
+.section__title h3 {
+  font-family: "Grand Hotel", cursive;
+  color: var(--cl-primary);
+}
+.section__title h2 {
+  margin-bottom: 2rem;
+}
+.container {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .container {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
 /*
 ============
 Header
@@ -137,4 +163,93 @@ Header
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  margin-top: 1.5rem;
+}
+/* content-divider */
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--cl-primary),
+    #e9b949,
+    var(--cl-primary)
+  );
+}
+/* Skills */
+
+.skills {
+  background: var(--cl-grey-ll);
+}
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--transition);
+}
+.skills__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+  display: inline-block;
+  color: var(--cl-primary);
+}
+
+.skills__text {
+  color: var(--cl-grey-l);
+  max-width: 17rem;
+  margin: 0 auto;
+}
+.skill:hover {
+  background: var(--cl-white);
+  box-shadow: 0 2px var(--cl-primary);
+}
+.skill:hover .skills__icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+}
+
+/* About */
+.about__img,
+.about__info {
+  padding: 2rem 0;
+}
+.about__img__container {
+  background: var(--cl-primary);
+  border: 0.5rem solid var(--cl-primary);
+  max-width: 30rem;
+  overflow: hidden;
+}
+
+.about__picture {
+  transition: var(--transition);
+}
+.about__img__container:hover .about__picture {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+/* @media sreen and (max-width: ); */
+.about__text {
+  max-width: 26rem;
+  color: var(--cl-grey-l);
+}
+
+@media screen and (min-width: 992px) {
+  .about__img,
+  .about__info {
+    float: left;
+    width: 50%;
+  }
+  .about__info {
+    padding-left: 4rem;
+  }
 }
