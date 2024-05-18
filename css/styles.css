@@ -445,3 +445,27 @@ Header
     width: 50%;
   }
 }
+/* footer */
+.footer {
+  background: #222;
+  text-align: center;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: var(--cl-white);
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+.social-icon:hover {
+  color: var(--cl-primary);
+}
+.footer-text {
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  color: var(--cl-white);
+  font-weight: 400;
+}
+.company {
+  color: var(--cl-primary);
+}
