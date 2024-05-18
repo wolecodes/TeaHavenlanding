@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* root varaible */
 :root {
@@ -8,8 +8,8 @@
   --cl-grey-l: #617d98;
   --cl-grey-ll: #f1f5f8;
   --cl-white: #fff;
-  --ff-primary: "Red Hat Display", sans-serif;
-  --ff-secondary: "Grand Hotel", cursive;
+  --ff-primary: 'Red Hat Display', sans-serif;
+  --ff-secondary: 'Grand Hotel', cursive;
   --transition: all 0.3s linear;
   --letter-spacing: 0.25rem;
   --radius: 0.5rem;
@@ -102,13 +102,13 @@ p {
 }
 .clearfix::after,
 .clearfix::before {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
 /* section Css */
 .section__title h3 {
-  font-family: "Grand Hotel", cursive;
+  font-family: 'Grand Hotel', cursive;
   color: var(--cl-primary);
 }
 .section__title h2 {
@@ -134,7 +134,7 @@ Header
 .header {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/main-bcg.jpeg") center/cover no-repeat fixed;
+    url('../images/main-bcg.jpeg') center/cover no-repeat fixed;
   position: relative;
   /* animation */
   overflow-x: hidden;
@@ -468,4 +468,67 @@ Header
 }
 .company {
   color: var(--cl-primary);
+}
+.nav-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  font-size: 2.5rem;
+  color: var(--cl-primary);
+  z-index: 1;
+  /* animation */
+}
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--cl-grey-ll);
+  z-index: 2;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  /* hide navbar */
+  transform: translateX(-100%);
+  transition: var(--transition);
+}
+.show {
+  /* show navbar */
+  transform: translate(0);
+}
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+.nav-close {
+  font-size: 2rem;
+  color: var(--cl-grey-d);
+  transition: var(--transition);
+}
+.nav-close:hover {
+  color: #bb2525;
+}
+
+.nav-items {
+  list-style-type: none;
+}
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  color: var(--cl-grey-d);
+  transition: var(--transition);
+}
+.nav-link:hover {
+  background: var(--cl-primary-light);
+  color: var(--cl-primary);
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--cl-primary);
+}
+@media screen and (min-width: 786px) {
+  .navbar {
+    width: 35%;
+    max-width: 20rem;
+  }
 }
