@@ -126,6 +126,134 @@ p {
     padding: 4rem 1rem;
   }
 }
+
+/* nav bar  */
+.nav-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  font-size: 2.5rem;
+  color: var(--cl-primary);
+  z-index: 1;
+  /* animation */
+  animation: bounce 2s ease infinite;
+}
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--cl-grey-ll);
+  z-index: 2;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  /* hide navbar */
+  transform: translateX(-100%);
+  transition: var(--transition);
+}
+.show {
+  /* show navbar */
+  transform: translate(0);
+}
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+.nav-close {
+  font-size: 2rem;
+  color: var(--cl-grey-d);
+  transition: var(--transition);
+}
+.nav-close:hover {
+  color: #bb2525;
+}
+
+.nav-items {
+  list-style-type: none;
+}
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  color: var(--cl-grey-d);
+  transition: var(--transition);
+}
+.nav-link:hover {
+  background: var(--cl-primary-light);
+  color: var(--cl-primary);
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--cl-primary);
+}
+@media screen and (min-width: 786px) {
+  .navbar {
+    width: 35%;
+    max-width: 20rem;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5rem;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 75%;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 75%;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 /*
 ============
 Header
@@ -150,12 +278,14 @@ Header
   font-family: var(--ff-secondary);
   color: var(--cl-primary);
   /* animation */
+  animation: slideFromRight 5s ease-in-out 1;
 }
 
 .banner h1 {
   text-transform: uppercase;
   color: var(--cl-white);
   margin-top: 1.25rem;
+  animation: slideFromLeft 5s ease-in-out 1;
   /* animation */
 }
 .banner__btn {
@@ -164,6 +294,7 @@ Header
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
   margin-top: 1.5rem;
+  animation: show 5s linear 1;
 }
 /* content-divider */
 .content-divider {
@@ -468,67 +599,4 @@ Header
 }
 .company {
   color: var(--cl-primary);
-}
-.nav-btn {
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  font-size: 2.5rem;
-  color: var(--cl-primary);
-  z-index: 1;
-  /* animation */
-}
-/* navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--cl-grey-ll);
-  z-index: 2;
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
-  /* hide navbar */
-  transform: translateX(-100%);
-  transition: var(--transition);
-}
-.show {
-  /* show navbar */
-  transform: translate(0);
-}
-.navbar-header {
-  text-align: right;
-  padding-right: 1rem;
-}
-.nav-close {
-  font-size: 2rem;
-  color: var(--cl-grey-d);
-  transition: var(--transition);
-}
-.nav-close:hover {
-  color: #bb2525;
-}
-
-.nav-items {
-  list-style-type: none;
-}
-.nav-link {
-  display: block;
-  font-size: 1.5rem;
-  padding: 0.25rem 1rem;
-  text-transform: capitalize;
-  letter-spacing: var(--letter-spacing);
-  color: var(--cl-grey-d);
-  transition: var(--transition);
-}
-.nav-link:hover {
-  background: var(--cl-primary-light);
-  color: var(--cl-primary);
-  padding-left: 1.5rem;
-  border-left: 0.25rem solid var(--cl-primary);
-}
-@media screen and (min-width: 786px) {
-  .navbar {
-    width: 35%;
-    max-width: 20rem;
-  }
 }
